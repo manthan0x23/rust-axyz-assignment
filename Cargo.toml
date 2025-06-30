@@ -1,0 +1,15 @@
+[package]
+name = "super-dev-assignment"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4.11.0"
+borsh = "1.5.7"
+chrono = "0.4.41"
+dotenv = "0.15.0"
+env_logger = "0.11.8"
+lazy_static = "1.5.0"
+serde = "1.0.219"
+serde_json = "1.0.140"
+tokio = "1.45.1"
