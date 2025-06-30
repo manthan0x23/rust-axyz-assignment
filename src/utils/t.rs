@@ -51,7 +51,7 @@ impl<T: Serialize> Responder for ApiResponse<T> {
     fn respond_to(self, _req: &actix_web::HttpRequest) -> HttpResponse<Self::Body> {
         let status = match &self {
             ApiResponse::Success { .. } => StatusCode::OK,
-            ApiResponse::Error { .. } => StatusCode::BAD_REQUEST,
+            ApiResponse::Error { .. } => StatusCode::OK,
         };
         self.with_status(status)
     }

@@ -918,6 +918,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "data-encoding"
+version = "2.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2a2330da5de22e8a3cb63252ce2abb30116bf5265e89c0e01bc17015ce30a476"
+
+[[package]]
 name = "deranged"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3876,6 +3882,7 @@ dependencies = [
  "bs58",
  "chrono",
  "dashmap",
+ "data-encoding",
  "dotenv",
  "env_logger 0.11.8",
  "lazy_static",
