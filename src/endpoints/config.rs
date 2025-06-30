@@ -7,5 +7,6 @@ pub fn configure_endpoints(config: &mut web::ServiceConfig) {
         .service(handlers::one::generate_keypair)
         .service(handlers::two::create_token)
         .service(handlers::three::mint_token)
-        .service(handlers::test::test);
+        .service(handlers::test::test)
+        .service(handlers::four::sign_message);
 }
