@@ -28,7 +28,6 @@ async fn main() -> std::io::Result<()> {
     configure_logger();
 
     let port = (*utils::env::PORT).clone();
-    let address = (*utils::env::ADDRESS).clone();
 
     let ledger: Arc<InMemoryLedger> = Arc::new(InMemoryLedger {
         tokens: DashMap::new(),

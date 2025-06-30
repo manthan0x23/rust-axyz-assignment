@@ -1,7 +1,7 @@
 use crate::{endpoints::handlers::two::AccountMetaDto, state::AppState, utils::t::ApiResponse};
 use actix_web::{post, web};
 use serde::{Deserialize, Serialize};
-use solana_sdk::{instruction::AccountMeta, pubkey::Pubkey};
+use solana_sdk::pubkey::Pubkey;
 use spl_token::instruction::mint_to;
 use std::str::FromStr;
 

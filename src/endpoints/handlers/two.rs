@@ -3,13 +3,13 @@ use std::str::FromStr;
 use crate::{state::AppState, utils::t::ApiResponse};
 use actix_web::{post, web};
 use serde::{Deserialize, Serialize};
-use solana_sdk::{instruction::AccountMeta, pubkey::Pubkey};
+use solana_sdk::pubkey::Pubkey;
 use spl_token::instruction::initialize_mint;
 
 #[derive(Deserialize)]
 pub struct TokenCreateRequest {
-    pub mint_authority: String, 
-    pub mint: String,          
+    pub mint_authority: String,
+    pub mint: String,
     pub decimals: u8,
 }
 
