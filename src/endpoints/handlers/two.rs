@@ -70,7 +70,7 @@ pub async fn create_token(
     let result = TokenCreateResponse {
         program_id: ix.program_id.to_string(),
         accounts,
-        instruction_data: bs58::encode(ix.data).into_string(),
+        instruction_data: data_encoding::BASE64.encode(&ix.data).to_string(),
     };
 
     ApiResponse::success(result)
