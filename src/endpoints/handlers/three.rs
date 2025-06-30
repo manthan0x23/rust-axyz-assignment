@@ -41,8 +41,6 @@ pub async fn mint_token(
         Ok(pk) => pk,
         Err(_) => return ApiResponse::error("Invalid authority pubkey"),
     };
-
-    // Check if mint exists and authority is valid
     let token_info = match ledger.tokens.get(&mint) {
         Some(info) => info,
         None => return ApiResponse::error("Mint not found in ledger"),

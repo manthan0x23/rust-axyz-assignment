@@ -15,7 +15,6 @@ pub struct InMemoryLedger {
     pub balances: DashMap<(Pubkey, Pubkey), u64>,
 }
 
-/// The enum to control API response
 #[derive(Serialize)]
 #[serde(untagged)]
 pub enum ApiResponse<T: Serialize> {
