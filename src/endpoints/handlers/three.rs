@@ -20,7 +20,7 @@ pub struct MintTokenResponse {
     pub instruction_data: String,
 }
 
-#[post("/token/mint")]
+#[post("token/mint")]
 pub async fn mint_token(
     req: web::Json<MintTokenRequest>,
     state: web::Data<AppState>,

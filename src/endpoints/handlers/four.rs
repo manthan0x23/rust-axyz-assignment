@@ -20,7 +20,7 @@ pub struct SignMessageResponse {
     message: String,
 }
 
-#[post("/message/sign")]
+#[post("message/sign")]
 pub async fn sign_message(req: web::Json<SignMessageRequest>) -> ApiResponse<SignMessageResponse> {
     if req.message.is_empty() || req.secret.is_empty() {
         return ApiResponse::error("Missing required fields");

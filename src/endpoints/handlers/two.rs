@@ -27,7 +27,7 @@ pub struct AccountMetaDto {
     pub is_writable: bool,
 }
 
-#[post("/token/create")]
+#[post("token/create")]
 pub async fn create_token(
     req: web::Json<TokenCreateRequest>,
     state: web::Data<AppState>,

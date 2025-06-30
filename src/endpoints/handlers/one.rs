@@ -10,7 +10,7 @@ struct KeypairResponse {
     secret: String,
 }
 
-#[post("/keypair")]
+#[post("keypair")]
 pub async fn generate_keypair() -> impl Responder {
     let keypair = Keypair::new();
     let pubkey = keypair.pubkey().to_string();
